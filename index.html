@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4ef">
+  <meta name="description" content="Rohan Singh develops websites from Rs. 4,999 and builds mobile apps. Get in touch to discuss your project.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rohan Singh | Mobile App Developer | Website Developer">
+  <meta property="og:description" content="Website development from Rs. 4,999 and mobile app development. Discuss your project with Rohan Singh.">
+  <title>Rohan Singh | Mobile App Developer | Website Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f4ef;
+      --ink: #181c18;
+      --muted: #5b625b;
+      --line: #d8dcd3;
+      --lime: #d5f36a;
+      --orange: #f05b38;
+      --panel: #e9ece5;
+      --mono: "DM Mono", Consolas, monospace;
+      --sans: "Space Grotesk", "Segoe UI", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: linear-gradient(rgba(24, 28, 24, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(24, 28, 24, 0.035) 1px, transparent 1px);
+      background-size: 36px 36px;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 max(24px, calc((100% - 1160px) / 2));
+      border-bottom: 1px solid var(--line);
+      background: rgba(244, 244, 239, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--lime);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+
+    .nav .nav-contact {
+      padding: 9px 15px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      min-height: 690px;
+      align-items: center;
+      grid-template-columns: minmax(0, 1.03fr) minmax(340px, 0.97fr);
+      gap: 48px;
+      padding-top: 76px;
+      padding-bottom: 76px;
+    }
+
+    .eyebrow,
+    .section-label {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: var(--orange);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 670px;
+      margin-bottom: 22px;
+      font-size: clamp(52px, 7vw, 88px);
+      font-weight: 600;
+      line-height: 0.98;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--orange);
+    }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 490px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .pipe-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 11px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .pipe-line span + span::before {
+      margin-right: 11px;
+      color: var(--orange);
+      content: "|";
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, background-color 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--lime);
+    }
+
+    .button-dark {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .portrait-panel {
+      position: relative;
+      display: grid;
+      min-height: 440px;
+      align-content: center;
+      justify-items: center;
+      gap: 16px;
+      padding: 28px;
+      border: 1px solid var(--ink);
+      border-radius: 5px;
+      background: var(--lime);
+      box-shadow: 10px 10px 0 var(--ink);
+      animation: rise-in 650ms ease-out both;
+    }
+
+    .portrait-placeholder {
+      display: grid;
+      width: min(100%, 320px);
+      min-height: 335px;
+      align-content: center;
+      justify-items: center;
+      gap: 13px;
+      padding: 28px;
+      border: 1px dashed var(--ink);
+      border-radius: 4px;
+      background: var(--paper);
+      text-align: center;
+    }
+
+    .portrait-placeholder strong {
+      max-width: 240px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .portrait-placeholder span {
+      max-width: 230px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .portrait-caption {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .offer-band {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 24px;
+      padding: 25px max(24px, calc((100% - 1160px) / 2));
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .offer-band p {
+      margin: 0;
+    }
+
+    .offer-price {
+      color: var(--lime);
+      font-size: 29px;
+      font-weight: 700;
+    }
+
+    .offer-note {
+      color: #c0c6bc;
+      font-size: 13px;
+    }
+
+    .section {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(260px, 0.6fr);
+      align-items: end;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      max-width: 600px;
+      margin: 0;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1;
+    }
+
+    .section-head > p {
+      max-width: 410px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-list {
+      border-top: 1px solid var(--ink);
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 70px minmax(190px, 0.7fr) minmax(250px, 1fr) auto;
+      align-items: center;
+      gap: 20px;
+      min-height: 114px;
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .service-number {
+      color: var(--orange);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .service h3 {
+      margin: 0;
+      font-size: 23px;
+    }
+
+    .service p {
+      max-width: 400px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .service-tag {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      font-family: var(--mono);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .contact {
+      margin-bottom: 50px;
+      padding: 48px;
+      border: 1px solid var(--ink);
+      background: var(--panel);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(270px, 0.65fr);
+      gap: 48px;
+    }
+
+    .contact h2 {
+      max-width: 550px;
+      margin-bottom: 13px;
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1;
+    }
+
+    .contact-copy > p:last-child {
+      max-width: 480px;
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-details li {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .contact-details li:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-details span {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .contact-details a {
+      overflow-wrap: anywhere;
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    footer {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding-top: 72px;
+        padding-bottom: 65px;
+      }
+
+      .hero-copy {
+        max-width: 690px;
+      }
+
+      .portrait-panel {
+        width: min(100%, 600px);
+      }
+
+      .service {
+        grid-template-columns: 50px minmax(160px, 0.8fr) minmax(180px, 1fr);
+        padding: 20px 0;
+      }
+
+      .service-tag {
+        grid-column: 2 / -1;
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        min-height: 64px;
+        padding: 0 18px;
+      }
+
+      .nav {
+        gap: 14px;
+        font-size: 12px;
+      }
+
+      .nav a[href*="linkedin.com"] {
+        display: none;
+      }
+
+      .wrap {
+        width: min(100% - 36px, 1160px);
+      }
+
+      .hero {
+        gap: 38px;
+        padding-top: 58px;
+        padding-bottom: 52px;
+      }
+
+      h1 {
+        font-size: clamp(49px, 15vw, 72px);
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        font-size: 16px;
+      }
+
+      .portrait-panel {
+        min-height: 380px;
+        padding: 16px;
+        box-shadow: 6px 6px 0 var(--ink);
+      }
+
+      .portrait-placeholder {
+        min-height: 300px;
+      }
+
+      .offer-band {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 22px 18px;
+      }
+
+      .offer-price {
+        font-size: 26px;
+      }
+
+      .section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .section-head,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .service {
+        grid-template-columns: 35px 1fr;
+        gap: 8px 13px;
+        padding: 19px 0;
+      }
+
+      .service h3 {
+        font-size: 20px;
+      }
+
+      .service p,
+      .service-tag {
+        grid-column: 2;
+      }
+
+      .contact {
+        margin-bottom: 28px;
+        padding: 26px 20px;
+      }
+
+      .contact-details li {
+        grid-template-columns: 68px 1fr;
+        gap: 7px;
+        font-size: 13px;
+      }
+
+      .contact-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Rohan Singh home">
+      <span class="brand-mark" aria-hidden="true">RS</span>
+      <span>ROHAN SINGH</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="https://www.linkedin.com/in/rohan-singh-s-92b28653/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent developer · Available for projects</p>
+        <h1 id="hero-title">ROHAN<br>SINGH<span>Build it.</span></h1>
+        <p>I build websites for businesses and help turn app ideas into working mobile products. Tell me what you need and let’s plan the right build.</p>
+        <div class="pipe-line" aria-label="Website development, mobile app development, starting from 4,999 rupees">
+          <span>WEBSITE DEV</span>
+          <span>MOBILE APP DEV</span>
+          <span>FROM ₹4,999</span>
+        </div>
+        <div class="actions">
+          <a class="button button-primary" href="https://wa.me/919424529090?text=Hi%20Rohan%2C%20I%27d%20like%20to%20discuss%20a%20website%20or%20app%20project." target="_blank" rel="noopener noreferrer">Discuss a project</a>
+          <a class="button button-dark" href="https://www.linkedin.com/in/rohan-singh-s-92b28653/" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="portrait-panel" aria-label="Portrait placeholder">
+        <div class="portrait-placeholder">
+          <strong>Your photo with a laptop goes here</strong>
+          <span>Replace this panel with your portrait to personalize the portfolio.</span>
+        </div>
+        <p class="portrait-caption">Rohan Singh / Developer</p>
+      </div>
+    </section>
+
+    <section class="offer-band" aria-label="Website starting price">
+      <p><strong class="offer-price">Websites from ₹4,999</strong></p>
+      <p class="offer-note">Mobile app pricing depends on your features and requirements.</p>
+    </section>
+
+    <section class="section wrap" id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <div>
+          <p class="section-label">01 / What I do</p>
+          <h2 id="services-title">From first idea to launch.</h2>
+        </div>
+        <p>Tell me about your goals, audience, and timeline. I’ll help you work out a practical next step and an estimate for the project.</p>
+      </div>
+      <div class="service-list">
+        <article class="service">
+          <span class="service-number">01</span>
+          <h3>Website development</h3>
+          <p>Responsive websites for businesses, professionals, and new ideas.</p>
+          <span class="service-tag">FROM ₹4,999</span>
+        </article>
+        <article class="service">
+          <span class="service-number">02</span>
+          <h3>Mobile app development</h3>
+          <p>Discuss your app concept, required features, and platform needs.</p>
+          <span class="service-tag">PROJECT ESTIMATE</span>
+        </article>
+        <article class="service">
+          <span class="service-number">03</span>
+          <h3>Updates and improvements</h3>
+          <p>Need changes to an existing website or app? Share what needs attention.</p>
+          <span class="service-tag">LET'S DISCUSS</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p class="section-label">02 / Start a conversation</p>
+          <h2 id="contact-title">Have a project in mind?</h2>
+          <p>Call, email, or message me with a short description of what you’re looking to build.</p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="tel:+919424529090">Call primary number</a>
+            <a class="button" href="https://www.linkedin.com/in/rohan-singh-s-92b28653/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+          </div>
+        </div>
+        <ul class="contact-details">
+          <li><span>Phone</span><a href="tel:+919424529090">+91 94245 29090</a></li>
+          <li><span>Phone</span><a href="tel:+917987605804">+91 79876 05804</a></li>
+          <li><span>Email</span><a href="mailto:rohansinghsisodiya32@gmail.com">rohansinghsisodiya32@gmail.com</a></li>
+          <li><span>Profile</span><a href="https://www.linkedin.com/in/rohan-singh-s-92b28653/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rohan-singh-s-92b28653</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>ROHAN SINGH · MOBILE APP DEV · WEBSITE DEV</p>
+    <p>Website projects from ₹4,999</p>
+  </footer>
+</body>
+</html>
