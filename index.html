@@ -237,31 +237,16 @@
       animation: rise-in 650ms ease-out both;
     }
 
-    .portrait-placeholder {
-      display: grid;
-      width: min(100%, 320px);
-      min-height: 335px;
-      align-content: center;
-      justify-items: center;
-      gap: 13px;
-      padding: 28px;
-      border: 1px dashed var(--ink);
+    .portrait-image {
+      display: block;
+      width: min(100%, 460px);
+      max-height: 380px;
+      height: auto;
+      border: 1px solid var(--ink);
       border-radius: 4px;
       background: var(--paper);
-      text-align: center;
-    }
-
-    .portrait-placeholder strong {
-      max-width: 240px;
-      font-size: 20px;
-      line-height: 1.2;
-    }
-
-    .portrait-placeholder span {
-      max-width: 230px;
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 11px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .portrait-caption {
@@ -519,10 +504,6 @@
         box-shadow: 6px 6px 0 var(--ink);
       }
 
-      .portrait-placeholder {
-        min-height: 300px;
-      }
-
       .offer-band {
         grid-template-columns: 1fr;
         gap: 4px;
@@ -623,11 +604,8 @@
         </div>
       </div>
 
-      <div class="portrait-panel" aria-label="Portrait placeholder">
-        <div class="portrait-placeholder">
-          <strong>Your photo with a laptop goes here</strong>
-          <span>Replace this panel with your portrait to personalize the portfolio.</span>
-        </div>
+      <div class="portrait-panel">
+        <img class="portrait-image" src="rohan-with-laptop.png" alt="Rohan Singh with his computer">
         <p class="portrait-caption">Rohan Singh / Developer</p>
       </div>
     </section>

@@ -8,7 +8,7 @@ Open `index.html` in a browser. The page uses plain HTML and CSS; no build step 
 
 ## Update the portrait
 
-Replace the marked portrait placeholder in `index.html` with a photo of Rohan. A suitable photo has not been added yet.
+Replace `rohan-with-laptop.png` with the updated photo, keeping the same filename so the homepage continues to load it.
 
 ## Publish with GitHub Pages
 
